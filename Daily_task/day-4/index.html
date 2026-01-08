@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Candidate Application</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Candidate Application Form</h2>
+
+    <form action="index.html" method="post" enctype="multipart/form-data">
+
+      <!-- Personal Details -->
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" value ="" placeholder="Enter Your First Name" required>
+       
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" value ="" placeholder="Enter Your Last Name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" required>
+
+      <!-- Uploads -->
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo"  required>
+
+      <label for="resume">Upload Resume (PDF)</label>
+      <input type="file" id="resume" accept=".pdf" required>
+
+      <!-- Job Details -->
+      <label for="role">Interested Job Role</label>
+      <select id="role" required>
+        <option>Frontend Developer</option>
+        <option>Backend Developer</option>
+        <option>Full Stack Developer</option>
+        <option>Data Analyst</option>
+        <option>Machine Learning Engineer</option>
+      </select>
+
+      <label for="eType">Employment Type</label>
+      <div class="radio-group">
+        <input type="radio" name="type" id="eType"> Full-Time
+        <input type="radio" name="type" id="eType"> Internship
+        <input type="radio" name="type" id="eType"> Contract
+      </div>
+
+      <!-- Expected CTC -->
+      <label for="ctc">Expected CTC (in LPA)</label>
+      <input type="range" id="ctc" min="2" max="50" value="6">
+      <div class="range-value">Range: 2 – 50 LPA</div>
+
+      <!-- Skills -->
+      <label>Technical Skills</label>
+      <div class="checkbox-group">
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <input type="checkbox"> JavaScript
+        <input type="checkbox"> React
+        <input type="checkbox"> Python
+      </div>
+
+      <!-- Experience -->
+      <label for="experience">Work Experience</label>
+      <textarea id="experience" rows="4" placeholder="Describe your experience"></textarea>
+
+      <!-- Availability -->
+      <label for="notice">Notice Period</label>
+      <select id="notice">
+        <option>Immediate</option>
+        <option>15 Days</option>
+        <option>30 Days</option>
+        <option>60 Days</option>
+      </select>
+
+      <!-- Relocation -->
+      <label>Willing to Relocate?</label>
+      <div class="radio-group">
+        <input type="radio" name="relocate" required> Yes
+        <input type="radio" name="relocate"> No
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn">Submit Application</button>
+      <button type="reset" class="btn">Reset Application</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
